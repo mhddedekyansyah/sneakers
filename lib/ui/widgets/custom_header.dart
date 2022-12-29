@@ -23,7 +23,8 @@ class CustomHeader extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: whiteStyle.copyWith(fontWeight: semibold, fontSize: 24),
+                style:
+                    whiteStyle.copyWith(fontWeight: semibold, fontSize: 24.sp),
               ),
               const SizedBox(
                 height: 5,

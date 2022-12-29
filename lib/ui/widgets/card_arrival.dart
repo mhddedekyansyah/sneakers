@@ -39,8 +39,8 @@ class _CardArrivalState extends State<CardArrival> {
                   ),
                   Text(
                     widget.product.name,
-                    style:
-                        whiteStyle.copyWith(fontWeight: semibold, fontSize: 16),
+                    style: whiteStyle.copyWith(
+                        fontWeight: semibold, fontSize: 16.sp),
                   ),
                   Text(
                     '${widget.product.price}',

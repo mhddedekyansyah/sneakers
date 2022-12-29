@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 double defaultMargin = 24.0;
 double defaultPadding = 24.0;
 const Color defaultBackground = Color(0xFF1F1D2B);
+const Color background = Color(0xFF242231);
 const Color primary = Color(0xFF6C5ECF);
 const Color textWhite = Color(0xFFF1F0F2);
 const Color textGray = Color(0xFF504F5E);

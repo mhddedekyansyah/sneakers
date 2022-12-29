@@ -37,12 +37,12 @@ class _CardProductState extends State<CardProduct> {
                 children: [
                   Text(
                     widget.product.category.name,
-                    style: grayStyle.copyWith(fontSize: 12),
+                    style: grayStyle.copyWith(fontSize: 12.sp),
                   ),
                   Text(
                     widget.product.name,
-                    style:
-                        blackStyle.copyWith(fontWeight: semibold, fontSize: 18),
+                    style: blackStyle.copyWith(
+                        fontWeight: semibold, fontSize: 18.sp),
                   ),
                   Text(
                     '${widget.product.price}',
