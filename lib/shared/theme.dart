@@ -8,6 +8,7 @@ const Color background = Color(0xFF242231);
 const Color primary = Color(0xFF6C5ECF);
 const Color textWhite = Color(0xFFF1F0F2);
 const Color textGray = Color(0xFF504F5E);
+const Color divider = Color(0xFF2B2939);
 const Color textBlack = Color(0xFF2E2E2E);
 const Color textBlue = Color(0xFF2C96F1);
 const Color formFillColor = Color(0xFF2B2937);
