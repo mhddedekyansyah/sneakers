@@ -7,11 +7,17 @@ const Color defaultBackground = Color(0xFF1F1D2B);
 const Color primary = Color(0xFF6C5ECF);
 const Color textWhite = Color(0xFFF1F0F2);
 const Color textGray = Color(0xFF504F5E);
+const Color textBlack = Color(0xFF2E2E2E);
+const Color textBlue = Color(0xFF2C96F1);
 const Color formFillColor = Color(0xFF2B2937);
+const Color bottomNavBarColor = Color(0xFF252836);
+const Color floatingBtnColor = Color(0xFF38ABBE);
 
 TextStyle primaryStyle = GoogleFonts.poppins(color: primary);
 TextStyle whiteStyle = GoogleFonts.poppins(color: textWhite);
 TextStyle grayStyle = GoogleFonts.poppins(color: textGray);
+TextStyle blackStyle = GoogleFonts.poppins(color: textBlack);
+TextStyle blueStyle = GoogleFonts.poppins(color: textBlue);
 
 FontWeight light = FontWeight.w300;
 FontWeight regular = FontWeight.w400;

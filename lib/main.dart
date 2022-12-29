@@ -22,6 +22,8 @@ class MyApp extends StatelessWidget {
             '/': (context) => const Splash(),
             '/sign-in': (context) => SignIn(),
             '/sign-up': (context) => SignUp(),
+            '/home': (context) => Home(),
+            '/main-home': (context) => MainHome()
           },
           debugShowCheckedModeBanner: false,
         );

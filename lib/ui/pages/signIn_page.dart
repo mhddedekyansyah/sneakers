@@ -43,7 +43,7 @@ class SignIn extends StatelessWidget {
                 height: defaultMargin,
               ),
               CustomButton(
-                onPressed: () {},
+                onPressed: () => Navigator.pushNamed(context, '/main-home'),
                 label: 'Sign In',
                 height: 6.h,
               ),

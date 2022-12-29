@@ -64,7 +64,7 @@ class SignUp extends StatelessWidget {
               ),
               CustomButton(
                 onPressed: () {},
-                label: 'Sign In',
+                label: 'Sign Up',
                 height: 6.h,
               ),
             ],
@@ -84,9 +84,9 @@ class SignUp extends StatelessWidget {
                   width: 5,
                 ),
                 GestureDetector(
-                  onTap: () => Navigator.pushNamed(context, '/sign-up'),
+                  onTap: () => Navigator.pop(context),
                   child: Text(
-                    'Sign Up',
+                    'Sign In',
                     style: primaryStyle.copyWith(fontSize: 12),
                   ),
                 ),
