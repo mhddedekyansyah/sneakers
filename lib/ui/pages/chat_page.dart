@@ -70,7 +70,7 @@ class Chat extends StatelessWidget {
               for (int i = 0; i < 3; i++)
                 Column(
                   children: [
-                    Container(
+                    SizedBox(
                       height: 8.h,
                       child: Row(
                         children: [
@@ -102,7 +102,7 @@ class Chat extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: divider,
                     )
@@ -119,8 +119,8 @@ class Chat extends StatelessWidget {
       body: Column(
         children: [
           header(),
-          // emptyChat()
-          content(),
+          emptyChat()
+          // content(),
         ],
       ),
     );

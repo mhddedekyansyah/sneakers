@@ -20,7 +20,7 @@ class SignIn extends StatelessWidget {
               SingleChildScrollView(
                   child: Column(
                 children: [
-                  CustomHeader(
+                  const CustomHeader(
                     title: 'Sign In',
                     subTitle: 'Sign In to Countinue',
                   ),

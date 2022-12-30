@@ -6,7 +6,7 @@ import 'package:sneakers/blocs/page/page_bloc.dart';
 import 'package:sneakers/ui/pages/pages.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -27,8 +27,8 @@ class MyApp extends StatelessWidget {
               '/sign-in': (context) => SignIn(),
               '/sign-up': (context) => SignUp(),
               '/home': (context) => Home(),
-              '/main-home': (context) => MainHome(),
-              '/chat': (context) => Chat()
+              '/main-home': (context) => const MainHome(),
+              '/chat': (context) => const Chat()
             },
             debugShowCheckedModeBanner: false,
           ),
