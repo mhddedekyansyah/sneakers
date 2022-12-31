@@ -43,27 +43,24 @@ class SignIn extends StatelessWidget {
     }
 
     Widget footer() {
-      return Container(
-        margin: const EdgeInsets.only(bottom: 5),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Don\'t have an account?',
-              style: grayStyle.copyWith(fontSize: 12.sp),
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Don\'t have an account?',
+            style: grayStyle.copyWith(fontSize: 12.sp),
+          ),
+          const SizedBox(
+            width: 5,
+          ),
+          GestureDetector(
+            onTap: () => Navigator.pushNamed(context, '/sign-up'),
+            child: Text(
+              'Sign Up',
+              style: primaryStyle.copyWith(fontSize: 12.sp),
             ),
-            const SizedBox(
-              width: 5,
-            ),
-            GestureDetector(
-              onTap: () => Navigator.pushNamed(context, '/sign-up'),
-              child: Text(
-                'Sign Up',
-                style: primaryStyle.copyWith(fontSize: 12.sp),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       );
     }
 
