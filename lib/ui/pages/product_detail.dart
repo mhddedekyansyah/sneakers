@@ -40,11 +40,11 @@ class _ProductDetailState extends State<ProductDetail> {
       ),
       body: Stack(
         children: [
-          widget.product.imgUrl.length > 1
+          widget.product.imgUrl!.length > 1
               ? Column(
                   children: [
                     CarouselSlider(
-                      items: widget.product.imgUrl
+                      items: widget.product.imgUrl!
                           .map(
                             (e) => Container(
                               height: 50.h,
@@ -69,16 +69,16 @@ class _ProductDetailState extends State<ProductDetail> {
                     ),
                     AnimatedSmoothIndicator(
                       activeIndex: currentIndex,
-                      count: widget.product.imgUrl.length,
+                      count: widget.product.imgUrl!.length,
                       effect: const ExpandingDotsEffect(
-                        dotHeight: 10.0,
-                        dotWidth: 10.0,
+                        dotHeight: 7.0,
+                        dotWidth: 7.0,
                         activeDotColor: primary,
                       ),
                     ),
                   ],
                 )
-              : Image.asset(widget.product.imgUrl.first),
+              : Image.asset(widget.product.imgUrl!.first),
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -103,12 +103,12 @@ class _ProductDetailState extends State<ProductDetail> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              widget.product.name,
+                              widget.product.name!,
                               style: whiteStyle.copyWith(
                                   fontSize: 14.sp, fontWeight: semibold),
                             ),
                             Text(
-                              widget.product.category.name,
+                              widget.product.category!.name,
                               style: greyStyle.copyWith(fontSize: 10.sp),
                             )
                           ],
@@ -197,7 +197,7 @@ class _ProductDetailState extends State<ProductDetail> {
                                         borderRadius: BorderRadius.circular(10),
                                         image: DecorationImage(
                                           image: AssetImage(
-                                            widget.product.imgUrl[index],
+                                            widget.product.imgUrl![index],
                                           ),
                                           fit: BoxFit.cover,
                                         ),
@@ -206,7 +206,7 @@ class _ProductDetailState extends State<ProductDetail> {
                                 separatorBuilder: (_, index) => const SizedBox(
                                       width: 10,
                                     ),
-                                itemCount: widget.product.imgUrl.length),
+                                itemCount: widget.product.imgUrl!.length),
                           )
                         ],
                       ),
@@ -217,19 +217,27 @@ class _ProductDetailState extends State<ProductDetail> {
                           horizontal: defaultMargin, vertical: defaultMargin),
                       child: Row(
                         children: [
-                          Container(
-                            height: 6.h,
-                            width: 6.h,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              border: Border.all(color: textGray),
-                            ),
-                            child: SvgPicture.asset(
-                              'assets/icons/ic_chat.svg',
-                              height: 2.5.h,
-                              width: 2.5.w,
-                              color: primary,
+                          GestureDetector(
+                            onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => DetailChat(
+                                          product: widget.product,
+                                        ))),
+                            child: Container(
+                              height: 6.h,
+                              width: 6.h,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                border: Border.all(color: textGray),
+                              ),
+                              child: SvgPicture.asset(
+                                'assets/icons/ic_chat.svg',
+                                height: 2.5.h,
+                                width: 2.5.w,
+                                color: primary,
+                              ),
                             ),
                           ),
                           const SizedBox(

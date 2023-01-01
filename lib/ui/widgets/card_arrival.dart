@@ -31,7 +31,7 @@ class _CardArrivalState extends State<CardArrival> {
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Image.asset(
-                  widget.product.imgUrl.first,
+                  widget.product.imgUrl!.first,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -42,12 +42,12 @@ class _CardArrivalState extends State<CardArrival> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        widget.product.category.name,
+                        widget.product.category!.name,
                         style: grayStyle.copyWith(),
                         overflow: TextOverflow.ellipsis,
                       ),
                       Text(
-                        widget.product.name,
+                        widget.product.name!,
                         style: whiteStyle.copyWith(
                             fontWeight: semibold, fontSize: 16.sp),
                         overflow: TextOverflow.ellipsis,

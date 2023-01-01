@@ -2,18 +2,18 @@
 part of 'models.dart';
 
 class Product extends Equatable {
-  final int id;
-  final String name;
-  final Category category;
-  final double price;
-  final List<String> imgUrl;
+  final int? id;
+  final String? name;
+  final Category? category;
+  final double? price;
+  final List<String>? imgUrl;
 
   const Product({
-    required this.id,
-    required this.name,
-    required this.category,
-    required this.price,
-    required this.imgUrl,
+    this.id,
+    this.name,
+    this.category,
+    this.price,
+    this.imgUrl,
   });
 
   static generatedProducts() {
@@ -64,3 +64,5 @@ class Product extends Equatable {
   @override
   List<Object?> get props => [id, name, category, price, imgUrl];
 }
+
+class UninitializedProductModel extends Product {}

@@ -5,16 +5,19 @@ class Chat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    PreferredSizeWidget header() {
-      return AppBar(
-        centerTitle: true,
-        elevation: 0.0,
-        title: Text(
-          'Message Support',
-          style: whiteStyle.copyWith(fontWeight: medium, fontSize: 14.sp),
+    PreferredSize header() {
+      return PreferredSize(
+        preferredSize: const Size.fromHeight(70),
+        child: AppBar(
+          centerTitle: true,
+          elevation: 0.0,
+          title: Text(
+            'Message Support',
+            style: whiteStyle.copyWith(fontWeight: medium, fontSize: 14.sp),
+          ),
+          backgroundColor: defaultBackground,
+          automaticallyImplyLeading: false,
         ),
-        backgroundColor: defaultBackground,
-        automaticallyImplyLeading: false,
       );
     }
 
@@ -46,11 +49,19 @@ class Chat extends StatelessWidget {
               SizedBox(
                 height: 2.h,
               ),
-              CustomButton(
-                onPressed: () {},
-                label: 'Explore Store',
-                height: 6.h,
-                width: 50.w,
+              BlocBuilder<PageBloc, int>(
+                builder: (context, state) {
+                  return CustomButton(
+                    onPressed: () {
+                      context.read<PageBloc>().add(
+                            const SetPageEvent(index: 0),
+                          );
+                    },
+                    label: 'Explore Store',
+                    height: 6.h,
+                    width: 50.w,
+                  );
+                },
               )
             ],
           ),

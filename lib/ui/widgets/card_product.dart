@@ -33,7 +33,7 @@ class _CardProductState extends State<CardProduct> {
                 borderRadius:
                     const BorderRadius.vertical(top: Radius.circular(10)),
                 child: Image.asset(
-                  widget.product.imgUrl.first,
+                  widget.product.imgUrl!.first,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -44,12 +44,12 @@ class _CardProductState extends State<CardProduct> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        widget.product.category.name,
+                        widget.product.category!.name,
                         style: grayStyle.copyWith(fontSize: 10.sp),
                         overflow: TextOverflow.ellipsis,
                       ),
                       Text(
-                        widget.product.name,
+                        widget.product.name!,
                         style: blackStyle.copyWith(
                             fontWeight: semibold, fontSize: 16.sp),
                         overflow: TextOverflow.ellipsis,

@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
               '/sign-up': (context) => SignUp(),
               '/home': (context) => Home(),
               '/main-home': (context) => const MainHome(),
-              '/chat': (context) => const Chat()
+              '/chat': (context) => const Chat(),
             },
             debugShowCheckedModeBanner: false,
           ),

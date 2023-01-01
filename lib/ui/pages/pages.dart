@@ -20,3 +20,4 @@ part 'home_page.dart';
 part 'main_home.dart';
 part 'chat_page.dart';
 part 'product_detail.dart';
+part 'detail_chat_page.dart';

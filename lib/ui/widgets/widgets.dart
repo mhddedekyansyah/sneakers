@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import 'package:sneakers/models/models.dart';
 import 'package:sneakers/shared/theme.dart';
@@ -10,3 +11,4 @@ part 'custom_button.dart';
 part 'card_category.dart';
 part 'card_product.dart';
 part 'card_arrival.dart';
+part 'chat_bubble.dart';
