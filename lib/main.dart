@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
               '/main-home': (context) => const MainHome(),
               '/chat': (context) => const Chat(),
               '/cart': (context) => Cart(),
+              '/edit-profile': (context) => EditProfilePage()
             },
             debugShowCheckedModeBanner: false,
           ),
