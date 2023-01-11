@@ -21,3 +21,4 @@ part 'product_detail_page.dart';
 part 'detail_chat_page.dart';
 part 'cart_page.dart';
 part 'profile_page.dart';
+part 'whislist_page.dart';

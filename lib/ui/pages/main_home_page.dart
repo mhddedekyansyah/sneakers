@@ -11,7 +11,7 @@ class MainHome extends StatelessWidget {
         backgroundColor: state == 0 ? defaultBackground : background,
         body: IndexedStack(
           index: state,
-          children: [Home(), const Chat()],
+          children: [Home(), const Chat(), WishlistPage(), ProfilePage()],
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {

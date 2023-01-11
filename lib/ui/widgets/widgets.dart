@@ -14,3 +14,4 @@ part 'card_arrival.dart';
 part 'chat_bubble.dart';
 part 'card_cart.dart';
 part 'show_success_dialog_cart.dart';
+part 'card_whislist.dart';
