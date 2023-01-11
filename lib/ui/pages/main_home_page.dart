@@ -14,7 +14,9 @@ class MainHome extends StatelessWidget {
           children: [Home(), const Chat()],
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/cart');
+          },
           backgroundColor: floatingBtnColor,
           elevation: 0.0,
           child: SvgPicture.asset('assets/icons/ic_cart.svg'),

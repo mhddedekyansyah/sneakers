@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
 
-part 'category.dart';
-part 'product.dart';
+part 'category_model.dart';
+part 'product_model.dart';
+part 'cart_model.dart';

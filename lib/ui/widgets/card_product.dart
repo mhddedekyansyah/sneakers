@@ -3,7 +3,7 @@ part of 'widgets.dart';
 class CardProduct extends StatefulWidget {
   const CardProduct({Key? key, required this.product}) : super(key: key);
 
-  final Product product;
+  final ProductModel product;
 
   @override
   State<CardProduct> createState() => _CardProductState();

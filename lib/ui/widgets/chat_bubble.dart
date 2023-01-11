@@ -3,7 +3,7 @@ part of 'widgets.dart';
 class ChatBubble extends StatelessWidget {
   final String text;
   final bool isSender;
-  final Product? product;
+  final ProductModel? product;
 
   ChatBubble({
     this.isSender = false,

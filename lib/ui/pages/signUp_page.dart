@@ -14,7 +14,7 @@ class SignUp extends StatelessWidget {
     Widget header() {
       return const CustomHeader(
         title: 'Sign Up',
-        subTitle: 'Register and Happy Shoping',
+        subTitle: 'Sign Up and Happy Shoping',
       );
     }
 

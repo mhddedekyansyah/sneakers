@@ -49,19 +49,15 @@ class Chat extends StatelessWidget {
               SizedBox(
                 height: 2.h,
               ),
-              BlocBuilder<PageBloc, int>(
-                builder: (context, state) {
-                  return CustomButton(
-                    onPressed: () {
-                      context.read<PageBloc>().add(
-                            const SetPageEvent(index: 0),
-                          );
-                    },
-                    label: 'Explore Store',
-                    height: 6.h,
-                    width: 50.w,
-                  );
+              CustomButton(
+                onPressed: () {
+                  context.read<PageBloc>().add(
+                        const SetPageEvent(index: 0),
+                      );
                 },
+                label: 'Explore Store',
+                height: 6.h,
+                width: 50.w,
               )
             ],
           ),

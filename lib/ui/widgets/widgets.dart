@@ -12,3 +12,5 @@ part 'card_category.dart';
 part 'card_product.dart';
 part 'card_arrival.dart';
 part 'chat_bubble.dart';
+part 'card_cart.dart';
+part 'show_success_dialog_cart.dart';

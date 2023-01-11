@@ -6,6 +6,7 @@ class CustomButton extends StatelessWidget {
       required this.onPressed,
       required this.label,
       required this.height,
+      this.icon,
       this.width = 0.0})
       : super(key: key);
 
@@ -13,6 +14,7 @@ class CustomButton extends StatelessWidget {
   final String label;
   final double height;
   final double width;
+  final IconData? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +24,27 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-            primary: primary,
-            textStyle: whiteStyle,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12))),
-        child: Text(
-          label,
-          style: whiteStyle,
+          primary: primary,
+          textStyle: whiteStyle,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
         ),
+        child: icon != null
+            ? Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    label,
+                    style: whiteStyle,
+                  ),
+                  Icon(icon)
+                ],
+              )
+            : Text(
+                label,
+                style: whiteStyle,
+              ),
       ),
     );
   }

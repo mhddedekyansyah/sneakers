@@ -3,7 +3,7 @@ part of 'widgets.dart';
 class CardCategory extends StatefulWidget {
   const CardCategory({Key? key, required this.category}) : super(key: key);
 
-  final Category category;
+  final CategoryModel category;
 
   @override
   State<CardCategory> createState() => _CardCategoryState();

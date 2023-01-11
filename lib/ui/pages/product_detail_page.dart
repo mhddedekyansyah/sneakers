@@ -2,7 +2,7 @@ part of 'pages.dart';
 
 class ProductDetail extends StatefulWidget {
   ProductDetail({Key? key, required this.product}) : super(key: key);
-  final Product product;
+  final ProductModel product;
 
   @override
   State<ProductDetail> createState() => _ProductDetailState();
@@ -23,11 +23,12 @@ class _ProductDetailState extends State<ProductDetail> {
         leading: GestureDetector(
           onTap: () => Navigator.pop(context),
           child: Container(
-              margin: EdgeInsets.only(left: defaultMargin),
-              child: const Icon(
-                Icons.arrow_back_ios,
-                color: defaultBackground,
-              )),
+            margin: EdgeInsets.only(left: defaultMargin),
+            child: const Icon(
+              Icons.arrow_back_ios,
+              color: defaultBackground,
+            ),
+          ),
         ),
         actions: [
           Container(
@@ -245,7 +246,9 @@ class _ProductDetailState extends State<ProductDetail> {
                           ),
                           Expanded(
                             child: CustomButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  showSuccessDialog(context);
+                                },
                                 label: 'Add to Cart',
                                 height: 6.h),
                           )

@@ -2,7 +2,7 @@ part of 'pages.dart';
 
 class DetailChat extends StatefulWidget {
   DetailChat({Key? key, this.product}) : super(key: key);
-  Product? product;
+  ProductModel? product;
 
   @override
   State<DetailChat> createState() => _DetailChatState();

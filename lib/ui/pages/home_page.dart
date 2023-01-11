@@ -3,8 +3,8 @@ part of 'pages.dart';
 class Home extends StatelessWidget {
   Home({Key? key}) : super(key: key);
 
-  List<Category> categories = Category.generatedCategory();
-  List<Product> products = Product.generatedProducts();
+  List<CategoryModel> categories = CategoryModel.generatedCategory();
+  List<ProductModel> products = ProductModel.generatedProducts();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,9 +19,10 @@ class Home extends StatelessWidget {
                     left: defaultMargin,
                     right: defaultMargin),
                 child: CustomHeader(
-                    title: 'Hello Dedek',
-                    subTitle: '@dedekyansyah,',
-                    img: SvgPicture.asset('assets/images/profile_null.svg')),
+                  title: 'Hello Dedek',
+                  subTitle: '@dedekyansyah',
+                  img: SvgPicture.asset('assets/images/profile_null.svg'),
+                ),
               ),
               SizedBox(
                 height: 12.w,
