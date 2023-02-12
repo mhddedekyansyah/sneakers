@@ -23,3 +23,5 @@ part 'cart_page.dart';
 part 'profile_page.dart';
 part 'whislist_page.dart';
 part 'edit_profile_page.dart';
+part 'checkout_page.dart';
+part 'checkout_success.dart';

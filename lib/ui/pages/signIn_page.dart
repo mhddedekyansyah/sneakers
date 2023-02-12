@@ -68,6 +68,7 @@ class SignIn extends StatelessWidget {
       backgroundColor: defaultBackground,
       resizeToAvoidBottomInset: false,
       body: SafeArea(
+        bottom: false,
         child: Container(
           width: 100.w,
           height: 100.h,

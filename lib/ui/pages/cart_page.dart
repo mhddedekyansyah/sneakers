@@ -2,7 +2,7 @@ part of 'pages.dart';
 
 class Cart extends StatelessWidget {
   Cart({Key? key, this.cart}) : super(key: key);
-  CartModel? cart;
+  List<CartModel>? cart;
   @override
   Widget build(BuildContext context) {
     PreferredSize header() {
@@ -76,7 +76,7 @@ class Cart extends StatelessWidget {
     }
 
     Widget customBottomNav() {
-      return SizedBox(
+      return Container(
         height: 180,
         child: Column(
           children: [
@@ -112,16 +112,41 @@ class Cart extends StatelessWidget {
               height: 30,
             ),
             Container(
-                height: 50,
-                margin: EdgeInsets.symmetric(
-                  horizontal: defaultMargin,
+              height: 50,
+              margin: EdgeInsets.symmetric(
+                horizontal: defaultMargin,
+              ),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/checkout');
+                },
+                style: TextButton.styleFrom(
+                  backgroundColor: textWhite,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
-                child: CustomButton(
-                  height: 6.h,
-                  label: 'Continue to Checkout',
-                  onPressed: () {},
-                  icon: Icons.arrow_forward,
-                )),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Continue to Checkout',
+                      style: whiteStyle.copyWith(
+                        fontSize: 16,
+                        fontWeight: semibold,
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_forward,
+                      color: textWhite,
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       );
@@ -133,9 +158,11 @@ class Cart extends StatelessWidget {
           horizontal: defaultMargin,
         ),
         children: [
-          CartCard(
-            cart: cart,
-          )
+          ...cart!
+              .map((cart) => CartCard(
+                    cart: cart,
+                  ))
+              .toList()
         ],
       );
     }
@@ -143,7 +170,7 @@ class Cart extends StatelessWidget {
     return Scaffold(
         backgroundColor: background,
         appBar: header(),
-        body: content(),
+        body: emptyCart(),
         bottomNavigationBar:
             cart != null ? customBottomNav() : const SizedBox());
   }

@@ -15,3 +15,5 @@ part 'chat_bubble.dart';
 part 'card_cart.dart';
 part 'show_success_dialog_cart.dart';
 part 'card_whislist.dart';
+part 'checkout_card.dart';
+part 'loading_button.dart';
