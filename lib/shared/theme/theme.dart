@@ -18,7 +18,7 @@ const Color onlineColor = Color(0xFF51C17E);
 const Color formFillColor = Color(0xFF2B2937);
 const Color bottomNavBarColor = Color(0xFF252836);
 const Color floatingBtnColor = Color(0xFF38ABBE);
-Color alertColor = Color(0xffED6363);
+const Color alertColor = Color(0xffED6363);
 
 TextStyle primaryStyle = GoogleFonts.poppins(color: primary);
 TextStyle whiteStyle = GoogleFonts.poppins(color: textWhite);

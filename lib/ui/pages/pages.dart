@@ -7,7 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:sneakers/blocs/page/page_bloc.dart';
 import 'package:sneakers/models/models.dart';
-import 'package:sneakers/shared/theme.dart';
+import 'package:sneakers/shared/theme/theme.dart';
 import 'package:sizer/sizer.dart';
 import 'package:sneakers/ui/widgets/widgets.dart';
 

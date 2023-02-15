@@ -19,7 +19,11 @@ class MyApp extends StatelessWidget {
     return Sizer(
       builder: (context, orientation, deviceType) {
         return MultiBlocProvider(
-          providers: [BlocProvider(create: (context) => PageBloc())],
+          providers: [
+            BlocProvider(
+              create: (context) => PageBloc(),
+            ),
+          ],
           child: MaterialApp(
             initialRoute: '/',
             routes: {

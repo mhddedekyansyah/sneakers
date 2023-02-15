@@ -55,7 +55,7 @@ class _CardProductState extends State<CardProduct> {
                         overflow: TextOverflow.ellipsis,
                       ),
                       Text(
-                        '${widget.product.price}',
+                        '${Helper.priceFormat(number: widget.product.price!.toInt())}',
                         style: blueStyle.copyWith(),
                         overflow: TextOverflow.ellipsis,
                       ),

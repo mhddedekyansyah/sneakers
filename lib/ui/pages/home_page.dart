@@ -24,6 +24,7 @@ class Home extends StatelessWidget {
                   img: SvgPicture.asset('assets/images/profile_null.svg'),
                 ),
               ),
+              const SearchBar(),
               SizedBox(
                 height: 12.w,
                 child: ListView.separated(
