@@ -1,16 +1,19 @@
-# sneakers
+# Simple Attendance App
 
-A new Flutter project.
+Made with flutter
+
+| Home Page      | History Page      |
+|------------|-------------|
+| <img src="https://user-images.githubusercontent.com/47232708/183290695-56bdc73a-d525-4063-a78b-61a6544ac65e.jpg" width="250"> | <img src="https://user-images.githubusercontent.com/47232708/183290713-081d83a5-3c32-467e-bed7-b4aacc29434a.jpg" width="250"> |
+
+
+## Techstack
+- Getx State Management
+- Dio
+- Google Fonts
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Pull this repository
+- Run command "flutter pub clean"
+- Then run command "flutter pub get"
+- And running in your device with command "flutter run"
